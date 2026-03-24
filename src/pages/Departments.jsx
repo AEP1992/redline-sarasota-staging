@@ -96,12 +96,12 @@ export default function Departments() {
       <div className="grid grid-cols-3 gap-4 mb-6">
         <KpiCard value={departments.length} label="Total Departments" color="blue" />
         <KpiCard value={departments.reduce((s, d) => s + d.stats.ff_count, 0).toLocaleString()} label="Total Personnel" color="green" />
-        <KpiCard value={uniqueCities.length} label="States Covered" color="navy" />
+        <KpiCard value="FL" label="State" color="navy" />
       </div>
 
       <div className="grid grid-cols-2 gap-4 mb-6">
         <div className="bg-white rounded-lg border border-surface-border p-5">
-          <h3 className="text-sm font-semibold text-gray-700 mb-3">Departments by State (Top 10)</h3>
+          <h3 className="text-sm font-semibold text-gray-700 mb-3">Department Location</h3>
           <div style={{ height: 120 }}><canvas ref={cityCanvasRef}></canvas></div>
         </div>
         <div className="bg-white rounded-lg border border-surface-border p-5">
